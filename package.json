@@ -1,0 +1,24 @@
+{
+  "name": "web-components",
+  "version": "1.0.0",
+  "description": "A playground for Web Components",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "start": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexNaga/web-components.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexNaga/web-components/issues"
+  },
+  "homepage": "https://github.com/AlexNaga/web-components#readme"
+}
