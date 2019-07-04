@@ -9,53 +9,27 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
+  interface PnSideMenu {}
 }
 
 declare global {
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLPnSideMenuElement extends Components.PnSideMenu, HTMLStencilElement {}
+  var HTMLPnSideMenuElement: {
+    prototype: HTMLPnSideMenuElement;
+    new (): HTMLPnSideMenuElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'pn-side-menu': HTMLPnSideMenuElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface MyComponent extends JSXBase.HTMLAttributes<HTMLMyComponentElement> {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
+  interface PnSideMenu extends JSXBase.HTMLAttributes<HTMLPnSideMenuElement> {}
 
   interface IntrinsicElements {
-    'my-component': MyComponent;
+    'pn-side-menu': PnSideMenu;
   }
 }
 
