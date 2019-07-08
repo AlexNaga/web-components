@@ -1,14 +1,22 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'pn-side-menu'
+  tag: 'pn-side-menu',
+  styleUrl: './side-menu.css',
+  shadow: true
 })
 export class SideMenu {
+  @Prop({ reflectToAttr: true }) title: string;
+
   render() {
     return (
-      <div>
-        <h1>The side menu</h1>
-      </div>
+      <aside>
+        <header><h1>{this.title}</h1></header>
+
+        <main>
+          <slot />
+        </main>
+      </aside>
     );
   }
 }

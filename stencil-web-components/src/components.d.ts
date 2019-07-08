@@ -9,7 +9,9 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface PnSideMenu {}
+  interface PnSideMenu {
+    'title': string;
+  }
 }
 
 declare global {
@@ -26,7 +28,9 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface PnSideMenu extends JSXBase.HTMLAttributes<HTMLPnSideMenuElement> {}
+  interface PnSideMenu extends JSXBase.HTMLAttributes<HTMLPnSideMenuElement> {
+    'title'?: string;
+  }
 
   interface IntrinsicElements {
     'pn-side-menu': PnSideMenu;
