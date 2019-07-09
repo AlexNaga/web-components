@@ -6,13 +6,13 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: true
 })
 export class SideMenu {
-  @Prop({ reflectToAttr: true }) title: string;
+  @Prop({ reflectToAttr: true }) text: string;
+  @Prop({ reflectToAttr: true }) open: boolean;
 
-  render() {
+  render() { 
     return (
       <aside>
-        <header><h1>{this.title}</h1></header>
-
+        <header><h1>{this.text}</h1></header>
         <main>
           <slot />
         </main>

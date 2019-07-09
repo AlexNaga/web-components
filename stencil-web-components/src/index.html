@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir='ltr' lang='en'>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0'>
   <title>Stencil Component Starter</title>
 
-  <link rel="stylesheet" type="text/css" href="/css/styles.css">
-  <script type="module" src="/build/web-components-stencil.esm.js"></script>
-  <script nomodule src="/build/web-components-stencil.js"></script>
+  <link rel='stylesheet' type='text/css' href='/css/styles.css'>
+  <script type='module' src='/build/web-components-stencil.esm.js'></script>
+  <script nomodule src='/build/web-components-stencil.js'></script>
 </head>
 
 <body>
-  <pn-side-menu title="Main menu">
-    <nav class="side-nav">
+  <button id='open-side-menu-btn'>Open side menu</button>
+  <pn-side-menu text='Main menu'>
+    <nav class='side-nav'>
       <ul>
-        <li><a href="#">A link</a></li>
-        <li><a href="#">Another link</a></li>
-        <li><a href="#">A third link</a></li>
+        <li><a href='#'>A link</a></li>
+        <li><a href='#'>Another link</a></li>
+        <li><a href='#'>A third link</a></li>
       </ul>
     </nav>
   </pn-side-menu>
+
+  <script>
+    const sideMenuBtn = document.querySelector('#open-side-menu-btn');
+    const sideMenu = document.querySelector('pn-side-menu');
+    sideMenuBtn.addEventListener('click', () => {
+      if (!sideMenu.open) {
+        this.sideMenu.open = true;
+      }
+    })
+  </script>
 </body>
 
 </html>
