@@ -10,7 +10,8 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface PnSideMenu {
-    'open': boolean;
+    'open': () => Promise<void>;
+    'opened': boolean;
     'text': string;
   }
 }
@@ -30,7 +31,7 @@ declare global {
 
 declare namespace LocalJSX {
   interface PnSideMenu extends JSXBase.HTMLAttributes<HTMLPnSideMenuElement> {
-    'open'?: boolean;
+    'opened'?: boolean;
     'text'?: string;
   }
 
