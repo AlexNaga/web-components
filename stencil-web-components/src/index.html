@@ -6,7 +6,7 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0'>
   <title>Stenciljs Web Components</title>
 
-  <link rel='stylesheet' type='text/css' href='/css/styles.css'>
+  <link rel='stylesheet' type='text/css' href='/css/main.css'>
   <script type='module' src='/build/web-components-stencil.esm.js'></script>
   <script nomodule src='/build/web-components-stencil.js'></script>
 </head>
@@ -23,15 +23,7 @@
     </nav>
   </pn-side-menu>
 
-  <script>
-    const sideMenuBtn = document.querySelector('#open-side-menu-btn');
-    const sideMenu = document.querySelector('pn-side-menu');
-    sideMenuBtn.addEventListener('click', () => {
-      if (!sideMenu.open) {
-        sideMenu.open = true;
-      }
-    })
-  </script>
+  <script src="/js/main.js"></script>
 </body>
 
 </html>

@@ -9,7 +9,7 @@ export class SideMenu {
   @Prop({ reflectToAttr: true }) text: string;
   @Prop({ reflectToAttr: true }) open: boolean;
 
-  render() { 
+  render() {
     return (
       <aside>
         <header><h1>{this.text}</h1></header>
