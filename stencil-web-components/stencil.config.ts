@@ -15,7 +15,8 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
       copy: [
         { src: 'js', dest: 'js' },
-        { src: 'css', dest: 'css' }
+        { src: 'css', dest: 'css' },
+        { src: '../config', dest: 'config' }
       ]
     }
   ]

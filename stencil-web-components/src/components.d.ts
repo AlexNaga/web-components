@@ -14,6 +14,7 @@ export namespace Components {
     'opened': boolean;
     'text': string;
   }
+  interface PnStockPrice {}
 }
 
 declare global {
@@ -24,8 +25,15 @@ declare global {
     prototype: HTMLPnSideMenuElement;
     new (): HTMLPnSideMenuElement;
   };
+
+  interface HTMLPnStockPriceElement extends Components.PnStockPrice, HTMLStencilElement {}
+  var HTMLPnStockPriceElement: {
+    prototype: HTMLPnStockPriceElement;
+    new (): HTMLPnStockPriceElement;
+  };
   interface HTMLElementTagNameMap {
     'pn-side-menu': HTMLPnSideMenuElement;
+    'pn-stock-price': HTMLPnStockPriceElement;
   }
 }
 
@@ -34,9 +42,11 @@ declare namespace LocalJSX {
     'opened'?: boolean;
     'text'?: string;
   }
+  interface PnStockPrice extends JSXBase.HTMLAttributes<HTMLPnStockPriceElement> {}
 
   interface IntrinsicElements {
     'pn-side-menu': PnSideMenu;
+    'pn-stock-price': PnStockPrice;
   }
 }
 
