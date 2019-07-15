@@ -14,7 +14,9 @@ export namespace Components {
     'opened': boolean;
     'text': string;
   }
-  interface PnStockPrice {}
+  interface PnStockPrice {
+    'stockSymbol': string;
+  }
 }
 
 declare global {
@@ -42,7 +44,9 @@ declare namespace LocalJSX {
     'opened'?: boolean;
     'text'?: string;
   }
-  interface PnStockPrice extends JSXBase.HTMLAttributes<HTMLPnStockPriceElement> {}
+  interface PnStockPrice extends JSXBase.HTMLAttributes<HTMLPnStockPriceElement> {
+    'stockSymbol'?: string;
+  }
 
   interface IntrinsicElements {
     'pn-side-menu': PnSideMenu;
